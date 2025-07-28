@@ -1,0 +1,78 @@
+:root {
+    --background: #e6f2f5;         /* Light aqua-teal */
+    --box: #cde5ea;                /* Muted blue */
+    --box-border: #aacfd5;
+    --text-dark: #2c3e50;
+    --accent: #4b9eb2;             /* Darker blue for accents */
+    --dotted-dot: #7bbac9;
+  }
+  
+  body {
+    background-color: var(--background);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+  }
+  
+  h1, h2, h3 {
+    color: var(--accent);
+  }
+  
+  .weekly-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .day-box {
+    background-color: var(--box);
+    border: 1px solid var(--box-border);
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  
+  /* Optional: Label for each box */
+  .day-box::before {
+    content: attr(data-day);
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-weight: bold;
+    color: var(--text-dark);
+  }
+  
+  /* Styling options */
+  .unlined {
+    background-color: var(--box);
+  }
+  
+  .lined {
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 18px, var(--box-border) 19px);
+  }
+  
+  .dotted {
+    background-image: radial-gradient(var(--dotted-dot) 0.5px, transparent 0.5px);
+    background-size: 16px 16px;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #3d88a1;
+  }
+  
