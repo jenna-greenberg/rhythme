@@ -32,7 +32,7 @@ export default defineConfig({
 
   // Development server configuration
   server: {
-    port: 4000,
+    port: 3000,
     host: true, // Listen on all addresses (useful for network access)
     open: true, // Automatically open browser on server start
     cors: true,
