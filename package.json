@@ -1,29 +1,34 @@
 {
   "name": "weekly-planner",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "A comprehensive weekly planner with drag-and-drop scheduling, multi-schedule overlays, and ADHD-friendly todo management",
   "private": true,
+  "homepage": ".",
+  "type": "module",
   "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "lucide-react": "^0.526.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.3",
+    "vite": "^4.4.5",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\"",
+    "test": "echo \"No tests specified yet\" && exit 0",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist/assets/*.js",
+    "clean": "rm -rf dist node_modules",
+    "reinstall": "npm run clean && npm install"
   },
   "browserslist": {
     "production": [
@@ -36,5 +41,40 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [
+    "react",
+    "planner",
+    "calendar",
+    "todo",
+    "productivity",
+    "adhd",
+    "scheduling",
+    "drag-and-drop",
+    "weekly-planner",
+    "time-management"
+  ],
+  "author": {
+    "name": "Weekly Planner Team"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jenna-greenberg/rhythme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jenna-greenberg/rhythme.git/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "files": [
+    "dist",
+    "public",
+    "src",
+    "index.html",
+    "vite.config.js",
+    "README.md"
+  ]
 }
